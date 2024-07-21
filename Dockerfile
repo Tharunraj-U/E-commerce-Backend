@@ -7,6 +7,6 @@ RUN mvn clean package -DskipTests
 # Use a slim version of OpenJDK to run the application
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/Ecommerce-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /app/target/Ecommerce-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

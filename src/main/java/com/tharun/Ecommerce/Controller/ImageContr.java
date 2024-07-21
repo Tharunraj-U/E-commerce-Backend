@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/image")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class ImageContr {
 
     @Autowired
